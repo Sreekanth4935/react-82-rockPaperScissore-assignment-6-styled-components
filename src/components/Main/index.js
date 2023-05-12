@@ -1,4 +1,6 @@
 import {Component} from 'react'
+import Popup from 'reactjs-popup'
+import {RiCloseLine} from 'react-icons/ri'
 import ShowCards from '../ShowCards'
 import ResultView from '../ResultView'
 
@@ -12,6 +14,10 @@ import {
   ScoreValue,
   ButtonContainer,
   ButtonRules,
+  ModelImage,
+  PopupContainer,
+  PopupAdjust,
+  TriggerButton,
 } from './styledComponents'
 
 class Main extends Component {
@@ -75,6 +81,31 @@ class Main extends Component {
     }))
   }
 
+  callPopup = () => (
+    <PopupAdjust>
+      <Popup modal trigger={<TriggerButton type="button">RULES</TriggerButton>}>
+        {close => (
+          <>
+            <PopupContainer>
+              <button
+                type="button"
+                className="trigger-button"
+                onClick={() => close()}
+              >
+                dddddddddd
+                <RiCloseLine />
+              </button>
+              <ModelImage
+                src="https://assets.ccbp.in/frontend/react-js/rock-paper-scissor/rules-image.png"
+                alt="rules"
+              />
+            </PopupContainer>
+          </>
+        )}
+      </Popup>
+    </PopupAdjust>
+  )
+
   renderGameView = () => {
     const {
       score,
@@ -91,10 +122,10 @@ class Main extends Component {
       <>
         <MainContainer>
           <ScoreCard>
-            <p>
+            <h1>
               ROCK <br /> PAPER <br />
               SCISSORS
-            </p>
+            </h1>
             <Score>
               <ScoreName>Score</ScoreName>
               <ScoreValue>{score} </ScoreValue>
@@ -122,7 +153,32 @@ class Main extends Component {
             )}
           </ImageTopContainer>
           <ButtonContainer>
-            <ButtonRules>RULES</ButtonRules>
+            <ButtonRules>
+              <PopupAdjust>
+                <Popup
+                  modal
+                  trigger={<ButtonRules type="button">RULES</ButtonRules>}
+                >
+                  {close => (
+                    <>
+                      <PopupContainer>
+                        <button
+                          type="button"
+                          className="trigger-button"
+                          onClick={() => close()}
+                        >
+                          <RiCloseLine />
+                        </button>
+                        <ModelImage
+                          src="https://assets.ccbp.in/frontend/react-js/rock-paper-scissor/rules-image.png"
+                          alt="rules"
+                        />
+                      </PopupContainer>
+                    </>
+                  )}
+                </Popup>
+              </PopupAdjust>
+            </ButtonRules>
           </ButtonContainer>
         </MainContainer>
       </>

@@ -12,8 +12,12 @@ const ShowCards = props => {
 
   return (
     <li>
-      <ImgButton onClick={renderResult} data-testid={`${smallCase}Button`}>
-        <Image src={imageUrl} alt="your choice" />
+      <ImgButton
+        onClick={renderResult}
+        data-testid={`${smallCase}Button`}
+        type="button"
+      >
+        <Image src={imageUrl} alt={id} />
       </ImgButton>
     </li>
   )

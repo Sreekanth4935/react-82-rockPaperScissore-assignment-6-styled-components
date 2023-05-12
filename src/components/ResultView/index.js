@@ -29,12 +29,12 @@ const ResultView = props => {
       <ResultContainer>
         <TextAndImageAlign>
           <ResultTextDetails>YOU</ResultTextDetails>
-          <ImageElements src={choiceImageUrl} alt="choice" />
+          <ImageElements src={choiceImageUrl} alt="your choice" />
         </TextAndImageAlign>
 
         <TextAndImageAlign>
           <ResultTextDetails>OPPONENT</ResultTextDetails>
-          <ImageElements src={opponentImageUrl} alt="opponent" />
+          <ImageElements src={opponentImageUrl} alt="opponent choice" />
         </TextAndImageAlign>
       </ResultContainer>
 

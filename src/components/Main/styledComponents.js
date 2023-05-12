@@ -50,6 +50,7 @@ export const ScoreName = Styled.p`
 margin-bottom: 0;
 `
 export const ScoreValue = Styled.p`
+  font-family:"Roboto"
   margin-top: 0px;
   padding-top: 5px;
   font-size: 35px;
@@ -73,4 +74,34 @@ export const ButtonRules = Styled.button`
   cursor: pointer;
   outline: none;
   align-self:flex-end;
+`
+export const PopupAdjust = Styled.div`
+display:flex;
+flex-direction:row;
+justify-content:center;
+align-items:center;
+`
+
+export const PopupContainer = Styled.div`
+background-color:#ffffff;
+padding:10px;
+display:flex;
+flex-direction:column;
+align-items:flex-end;
+justify-content:center;
+margin-bottom:30px;
+`
+
+export const ModelImage = Styled.img`
+ height:300px;
+ margin:20px;
+@media screen and (min-width:768px){
+    height:500px;
+    max-height:30%;
+} 
+`
+export const TriggerButton = Styled.button`
+background-color:transparent;
+width:100%;
+border:0;
 `
