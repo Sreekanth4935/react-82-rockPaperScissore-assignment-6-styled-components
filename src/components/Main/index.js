@@ -81,31 +81,6 @@ class Main extends Component {
     }))
   }
 
-  callPopup = () => (
-    <PopupAdjust>
-      <Popup modal trigger={<TriggerButton type="button">RULES</TriggerButton>}>
-        {close => (
-          <>
-            <PopupContainer>
-              <button
-                type="button"
-                className="trigger-button"
-                onClick={() => close()}
-              >
-                dddddddddd
-                <RiCloseLine />
-              </button>
-              <ModelImage
-                src="https://assets.ccbp.in/frontend/react-js/rock-paper-scissor/rules-image.png"
-                alt="rules"
-              />
-            </PopupContainer>
-          </>
-        )}
-      </Popup>
-    </PopupAdjust>
-  )
-
   renderGameView = () => {
     const {
       score,
