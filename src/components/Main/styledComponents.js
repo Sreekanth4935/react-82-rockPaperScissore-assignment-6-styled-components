@@ -44,6 +44,7 @@ export const ImagesContainer = Styled.ul`
   padding-left: 0;
   flex-wrap: wrap;
   width: 100%;
+  
 `
 export const ScoreName = Styled.p`
 margin-bottom: 0;
@@ -59,12 +60,9 @@ export const ButtonContainer = Styled.div`
   color: #223a5f;
   border-radius: 3px;
   font-family: 'Roboto';
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
   width: 100%;
   background-color: transparent;
+  text-align:end;
 `
 export const ButtonRules = Styled.button`
   border: 0;
@@ -74,4 +72,5 @@ export const ButtonRules = Styled.button`
   padding: 5px;
   cursor: pointer;
   outline: none;
+  align-self:flex-end;
 `

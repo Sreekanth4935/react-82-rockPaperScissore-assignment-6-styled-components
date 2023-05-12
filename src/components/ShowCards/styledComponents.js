@@ -2,7 +2,6 @@ import Styled from 'styled-components'
 
 export const Image = Styled.img`
 height: 150px;
-width: 150px;
 background-color: transparent;
 `
 
